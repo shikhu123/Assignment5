@@ -3,7 +3,37 @@
    <head>
       <meta charset = "utf-8">
 	  <link rel="stylesheet" type="text/css" href="style.css">
-	  <script href="jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#euro").click(function(){
+     var euroinput=$("#euro1").val() * 0.65;
+    alert("Amount in Euro is : "+euroinput);
+  });
+});
+
+$(document).ready(function(){
+  $("#usd").click(function(){
+     var usdinput=$("#usd1").val() * 0.79;
+    alert("Amount in USD is : "+usdinput);
+  });
+});
+
+$(document).ready(function(){
+  $("#season").click(function(){
+     var input = prompt("Enter your favourite season : ");
+     document.getElementById("display").innerHTML= input+" is an excellent choice !! :)"
+     if(input=""){
+        alert("Please enter the valid input !!");
+     }
+  });
+});
+
+</script>
+
+
+	  <!-- <script href="jquery.js" type="text/javascript"></script> -->
+
       <title>Currency Calculator</title>
    </head>
    <body>
@@ -16,15 +46,20 @@
             <table>
                <tr>
                   <td>Euro: </td>
-                  <td><input type="text" name="euro" placeholder="1 CAD = 0.65 Euro" /> <input type="button" id="euro" value="CAD to Euro!" /></td>
+                  <td><input type="text" id="euro1" name="euro" placeholder="1 CAD = 0.65 Euro" /> <input type="button" id="euro" value="CAD to Euro!"/></td>
                </tr>
                <tr>
                   <td>US Dollar: </td>
-                  <td><input type="text" name="dollar" placeholder="1 CAD = 0.79 USD" /> <input type="button" id="usd" value="CAD to USD!" /></td>
-               <!-- </tr>
-                  <td colspan="2" align="center"><input type="button" value="Convert!" /></td>
-               </tr> -->
+                  <td><input type="text" id="usd1" name="dollar" placeholder="1 CAD = 0.79 USD" /> <input type="button" id="usd" value="CAD to USD!" /></td>
+               </tr>
+               
+               <!-- <tr>                 
+                  <td colspan="2" align="center"><input type="button" value="Click Me!!" /></td>
+               </tr>  -->
             </table>
+            <h2>Click on the button below</h2>
+            <input type="button" value="Click Me!!" id="season" />
+            <p id="display"></p>
          </form>
       </main>
    </body>
