@@ -7,8 +7,14 @@
 <script>
 $(document).ready(function(){
   $("#euro").click(function(){
-     var euroinput=$("#euro1").val() * 0.65;
-    alert("Amount in Euro is : "+euroinput);
+     var euroinput=$("#euro1").val() ;
+     var euroresult= euroinput * 0.65;
+     if(euroinput===""){
+        document.getElementById("europ").innerHTML="The input cannot be empty";
+     }
+     else(
+      document.getElementById("europ").innerHTML= usdresult+" euro"
+     )
   });
 });
 
@@ -17,8 +23,12 @@ $(document).ready(function(){
 
      var usdinput=$("#usd1").val();
      var usdresult= usdinput * 0.79;
-      alert("Amount in USD is : "+usdresult)
-    
+     if(usdinput===""){
+        document.getElementById("usdp").innerHTML="The input cannot be empty";
+     }
+     else(
+      document.getElementById("usdp").innerHTML= usdresult+" USD"
+     )    
   });
 });
 
@@ -63,10 +73,12 @@ $(document).ready(function(){
                <tr>
                   <td>Euro: </td>
                   <td><input type="text" id="euro1" name="euro" placeholder="1 CAD = 0.65 Euro" /> <input type="button" id="euro" value="CAD to Euro!"/></td>
+                  <td><p id ="europ"></p></td>
                </tr>
                <tr>
-                  <td>US Dollar: </td>
+                  <td>USD: </td>
                   <td><input type="text" id="usd1" name="dollar" placeholder="1 CAD = 0.79 USD" /> <input type="button" id="usd" value="CAD to USD!" /></td>
+                  <td><p id ="usdp"></p></td>
                </tr>
             </table>
             <h2>Click on the button below</h2>
