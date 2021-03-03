@@ -1,9 +1,28 @@
-body{
+body{	
 	margin:2% 25% 2% 25%; 
+}
+table tr td{		
+    padding: 10px;
+}
+main{
+	padding:10px;
 	box-shadow: 5px 5px #88886666; 
 	border: 1px solid; 
-	padding:10px;
+	background-color: rgb(199, 238, 238);
 }
-table tr td{
-    padding: 10px;
+#europ{
+	font-weight: bold;
+	font-style: italic;
+	color: red;
+}
+#usdp{
+	font-weight: bold;
+	font-style: italic;
+	color: red;
+}
+#display{
+	font-weight: bold;
+	font-size: medium;
+	font-style: italic;
+	color: red;
 }
